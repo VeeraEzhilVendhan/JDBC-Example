@@ -46,18 +46,8 @@ public class Transaction {
 		
 		queryAllRecords(connection);
 		
-	}
-	
-	private static void deleteRecord(Connection connection, int id) throws SQLException {
-		
-		PreparedStatement pstmt = connection.prepareStatement("DELETE FROM "
-				+" EMPLOYEE WHERE ID=?");
-		
-		pstmt.setInt(1, id);
-		
-		pstmt.execute();
-		
-		System.out.println("Deleted record with id "+id);
+		scan.close();
+		connection.close();
 	}
 	
 	private static void queryAllRecords(Connection connection) throws SQLException {
