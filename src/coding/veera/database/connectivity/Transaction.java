@@ -40,7 +40,6 @@ public class Transaction {
 		
 		if("y".equalsIgnoreCase(rollBack))
 			connection.rollback();
-		else if("n".equalsIgnoreCase(rollBack))
 		
 		if("n".equalsIgnoreCase(setAutoCommit))
 			connection.commit();
